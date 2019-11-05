@@ -6,7 +6,8 @@ target 'ERPLogistica' do
   use_frameworks!
 
   # Pods for ERPLogistica
-    pod 'Firebase/Analytics'
+	pod 'Firebase'
+	pod 'Firebase/Database'
 
 end
 
