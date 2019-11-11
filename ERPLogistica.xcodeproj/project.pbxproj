@@ -18,6 +18,13 @@
 		6B600317236C9BB1002BD29C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B600315236C9BB1002BD29C /* LaunchScreen.storyboard */; };
 		A9392257747BF274DC6DF2AA /* Pods_ERPLogistica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58C311FD82FB3B71E4D3CE3 /* Pods_ERPLogistica.framework */; };
 		AE31EEB7236CA9F00048985D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE31EEB6236CA9F00048985D /* GoogleService-Info.plist */; };
+		AE40EA6F23799FEA00EEA531 /* ProdutosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE40EA6D23799FEA00EEA531 /* ProdutosCell.swift */; };
+		AE40EA7023799FEA00EEA531 /* ProdutosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE40EA6E23799FEA00EEA531 /* ProdutosCell.xib */; };
+		AECF6B4023799C270051CEA0 /* DetalhesPedidoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF6B3F23799C270051CEA0 /* DetalhesPedidoViewController.swift */; };
+		AED8A0982372210D00DD61C1 /* PedidoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AED8A0932372210D00DD61C1 /* PedidoViewController.storyboard */; };
+		AED8A0992372210D00DD61C1 /* PedidoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED8A0942372210D00DD61C1 /* PedidoViewController.swift */; };
+		AED8A09A2372210D00DD61C1 /* PedidosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED8A0962372210D00DD61C1 /* PedidosCell.swift */; };
+		AED8A09B2372210D00DD61C1 /* PedidosCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED8A0972372210D00DD61C1 /* PedidosCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +42,13 @@
 		6B600318236C9BB1002BD29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD22F07F3218602D92C75ACE /* Pods-ERPLogistica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERPLogistica.release.xcconfig"; path = "Target Support Files/Pods-ERPLogistica/Pods-ERPLogistica.release.xcconfig"; sourceTree = "<group>"; };
 		AE31EEB6236CA9F00048985D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AE40EA6D23799FEA00EEA531 /* ProdutosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdutosCell.swift; sourceTree = "<group>"; };
+		AE40EA6E23799FEA00EEA531 /* ProdutosCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProdutosCell.xib; sourceTree = "<group>"; };
+		AECF6B3F23799C270051CEA0 /* DetalhesPedidoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesPedidoViewController.swift; sourceTree = "<group>"; };
+		AED8A0932372210D00DD61C1 /* PedidoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PedidoViewController.storyboard; sourceTree = "<group>"; };
+		AED8A0942372210D00DD61C1 /* PedidoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidoViewController.swift; sourceTree = "<group>"; };
+		AED8A0962372210D00DD61C1 /* PedidosCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedidosCell.swift; sourceTree = "<group>"; };
+		AED8A0972372210D00DD61C1 /* PedidosCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PedidosCell.xib; sourceTree = "<group>"; };
 		C58C311FD82FB3B71E4D3CE3 /* Pods_ERPLogistica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ERPLogistica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -88,6 +102,7 @@
 		6B600309236C9BAF002BD29C /* ERPLogistica */ = {
 			isa = PBXGroup;
 			children = (
+				AED8A091237220E800DD61C1 /* Pedido Giovane */,
 				6B40D1E32370F19A00C1D1F7 /* Models */,
 				6B60030A236C9BAF002BD29C /* AppDelegate.swift */,
 				6B60030E236C9BAF002BD29C /* ViewController.swift */,
@@ -100,6 +115,36 @@
 				6B600318236C9BB1002BD29C /* Info.plist */,
 			);
 			path = ERPLogistica;
+			sourceTree = "<group>";
+		};
+		AED8A091237220E800DD61C1 /* Pedido Giovane */ = {
+			isa = PBXGroup;
+			children = (
+				AED8A0922372210D00DD61C1 /* Tela Pedidos */,
+			);
+			name = "Pedido Giovane";
+			sourceTree = "<group>";
+		};
+		AED8A0922372210D00DD61C1 /* Tela Pedidos */ = {
+			isa = PBXGroup;
+			children = (
+				AED8A0952372210D00DD61C1 /* Cell */,
+				AED8A0932372210D00DD61C1 /* PedidoViewController.storyboard */,
+				AED8A0942372210D00DD61C1 /* PedidoViewController.swift */,
+				AECF6B3F23799C270051CEA0 /* DetalhesPedidoViewController.swift */,
+			);
+			path = "Tela Pedidos";
+			sourceTree = "<group>";
+		};
+		AED8A0952372210D00DD61C1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AED8A0962372210D00DD61C1 /* PedidosCell.swift */,
+				AED8A0972372210D00DD61C1 /* PedidosCell.xib */,
+				AE40EA6D23799FEA00EEA531 /* ProdutosCell.swift */,
+				AE40EA6E23799FEA00EEA531 /* ProdutosCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		B1D7AE94C3B8E94903460C2C /* Pods */ = {
@@ -172,8 +217,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B600317236C9BB1002BD29C /* LaunchScreen.storyboard in Resources */,
+				AE40EA7023799FEA00EEA531 /* ProdutosCell.xib in Resources */,
 				AE31EEB7236CA9F00048985D /* GoogleService-Info.plist in Resources */,
+				AED8A0982372210D00DD61C1 /* PedidoViewController.storyboard in Resources */,
 				6B600314236C9BB1002BD29C /* Assets.xcassets in Resources */,
+				AED8A09B2372210D00DD61C1 /* PedidosCell.xib in Resources */,
 				6B600312236C9BAF002BD29C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,9 +276,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B60030F236C9BAF002BD29C /* ViewController.swift in Sources */,
+				AED8A0992372210D00DD61C1 /* PedidoViewController.swift in Sources */,
 				6B40D1DA2370EF8600C1D1F7 /* CadastraProdutoViewController.swift in Sources */,
+				AE40EA6F23799FEA00EEA531 /* ProdutosCell.swift in Sources */,
 				6B60030B236C9BAF002BD29C /* AppDelegate.swift in Sources */,
+				AED8A09A2372210D00DD61C1 /* PedidosCell.swift in Sources */,
 				6B40D1DC2370EF8B00C1D1F7 /* CadastroPedidoTableViewCell.swift in Sources */,
+				AECF6B4023799C270051CEA0 /* DetalhesPedidoViewController.swift in Sources */,
 				6B40D1E22370F14000C1D1F7 /* Pedido.swift in Sources */,
 				6B40D1E52370F1AD00C1D1F7 /* Produto.swift in Sources */,
 			);
