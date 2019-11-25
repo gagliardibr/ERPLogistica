@@ -8,33 +8,32 @@
 
 import UIKit
 
-struct Pedido: Codable {
+struct Pedido {
     
     //Pedido
-    let codVenda: String?
-    let notaFiscal: String?
-    
-    //Envio
-    let codEnvio: String?
-    let dataEnvio: Date?
-    let statusPedido: String?
-    
+    let codVenda: String
+    let notaFiscal: String
+
     //cliente
-    let nomeCliente: String?
-    let endereco: String?
+    let nomeCliente: String
+    let endereco: String
     
-    //produto
-    let produto: [Produto]?
+    //Data do pedido
+    let data: String
+    let status: String
     
-    init(codVenda: String, notaFiscal: String, codEnvio: String, dataEnvio: Date, statusPedido: String, nomeCliente: String, endereco: String, produto: [Produto]) {
+    //Produto
+    let produtos: [Produto]
+    
+    init(codVenda: String = " ", notaFiscal: String = " ",  endereco: String = " ",
+         nomeCliente: String = " ", data: String = " ", status: String, produtos: [Produto] ) {
         
         self.codVenda = codVenda
         self.notaFiscal = notaFiscal
-        self.codEnvio = codEnvio
-        self.dataEnvio = dataEnvio
-        self.statusPedido = statusPedido
-        self.nomeCliente = nomeCliente
         self.endereco = endereco
-        self.produto = produto
+        self.nomeCliente = nomeCliente
+        self.data = data
+        self.status = status
+        self.produtos = produtos
     }
 }

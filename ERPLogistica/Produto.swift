@@ -8,14 +8,15 @@
 
 import UIKit
 
-struct Produto: Codable {
+struct Produto {
     
-    let nome: String?
-    let quantidade: String?
+    let nomeProduto: String
+    let quantidade: String
     
-    init(nome: String, quantidade: String){
-        self.nome = nome
+    init(nomeProduto: String = " ",
+            quantidade: String = " ") {
+           
+        self.nomeProduto = nomeProduto
         self.quantidade = quantidade
-        
-    }
+       }
 }
