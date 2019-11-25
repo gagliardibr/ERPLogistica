@@ -228,6 +228,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="endereco" destination="OIH-81-mnE" id="k9D-Zq-sPz"/>
+                        <outlet property="nomeCliente" destination="I7i-Bs-4DZ" id="Svu-cw-806"/>
                         <outlet property="nroNota" destination="Pi3-Mm-Okq" id="WD4-9Y-ANG"/>
                         <outlet property="status" destination="PJp-sB-Alm" id="RHG-fD-AHx"/>
                         <outlet property="tableView" destination="Ydk-BU-mez" id="qLj-me-aj1"/>
@@ -326,12 +327,18 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Salvar"/>
+                                        <connections>
+                                            <action selector="btnTapped:" destination="fak-0D-BE0" eventType="touchUpInside" id="uMb-ci-GaG"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8i7-Be-ZSM">
                                         <rect key="frame" x="211" y="448" width="120" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.71212852000000004" blue="0.6524288654" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Enviar por email"/>
+                                        <connections>
+                                            <action selector="emailBtnTapped:" destination="fak-0D-BE0" eventType="touchUpInside" id="xTn-Ro-8q4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
