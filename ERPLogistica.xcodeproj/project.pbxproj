@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B40D1DA2370EF8600C1D1F7 /* CadastraProdutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B40D1D92370EF8600C1D1F7 /* CadastraProdutoViewController.swift */; };
 		6B40D1DC2370EF8B00C1D1F7 /* CadastroPedidoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B40D1DB2370EF8B00C1D1F7 /* CadastroPedidoTableViewCell.swift */; };
 		6B40D1E22370F14000C1D1F7 /* Pedido.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B40D1E12370F14000C1D1F7 /* Pedido.swift */; };
 		6B40D1E52370F1AD00C1D1F7 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B40D1E42370F1AD00C1D1F7 /* Produto.swift */; };
@@ -18,6 +17,8 @@
 		6B600317236C9BB1002BD29C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B600315236C9BB1002BD29C /* LaunchScreen.storyboard */; };
 		A9392257747BF274DC6DF2AA /* Pods_ERPLogistica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58C311FD82FB3B71E4D3CE3 /* Pods_ERPLogistica.framework */; };
 		AE31EEB7236CA9F00048985D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE31EEB6236CA9F00048985D /* GoogleService-Info.plist */; };
+		C59E7D0C237A3236006D4BAC /* CadastraProdutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B40D1D92370EF8600C1D1F7 /* CadastraProdutoViewController.swift */; };
+		C59E7D0E237A36AB006D4BAC /* CadastroProdutoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C59E7D0D237A36AB006D4BAC /* CadastroProdutoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		AD22F07F3218602D92C75ACE /* Pods-ERPLogistica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ERPLogistica.release.xcconfig"; path = "Target Support Files/Pods-ERPLogistica/Pods-ERPLogistica.release.xcconfig"; sourceTree = "<group>"; };
 		AE31EEB6236CA9F00048985D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C58C311FD82FB3B71E4D3CE3 /* Pods_ERPLogistica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ERPLogistica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C59E7D0D237A36AB006D4BAC /* CadastroProdutoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CadastroProdutoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				6B60030A236C9BAF002BD29C /* AppDelegate.swift */,
 				6B60030E236C9BAF002BD29C /* ViewController.swift */,
 				6B40D1D92370EF8600C1D1F7 /* CadastraProdutoViewController.swift */,
+				C59E7D0D237A36AB006D4BAC /* CadastroProdutoCell.xib */,
 				6B40D1DB2370EF8B00C1D1F7 /* CadastroPedidoTableViewCell.swift */,
 				6B600310236C9BAF002BD29C /* Main.storyboard */,
 				6B600313236C9BB1002BD29C /* Assets.xcassets */,
@@ -174,6 +177,7 @@
 				6B600317236C9BB1002BD29C /* LaunchScreen.storyboard in Resources */,
 				AE31EEB7236CA9F00048985D /* GoogleService-Info.plist in Resources */,
 				6B600314236C9BB1002BD29C /* Assets.xcassets in Resources */,
+				C59E7D0E237A36AB006D4BAC /* CadastroProdutoCell.xib in Resources */,
 				6B600312236C9BAF002BD29C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,7 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B60030F236C9BAF002BD29C /* ViewController.swift in Sources */,
-				6B40D1DA2370EF8600C1D1F7 /* CadastraProdutoViewController.swift in Sources */,
+				C59E7D0C237A3236006D4BAC /* CadastraProdutoViewController.swift in Sources */,
 				6B60030B236C9BAF002BD29C /* AppDelegate.swift in Sources */,
 				6B40D1DC2370EF8B00C1D1F7 /* CadastroPedidoTableViewCell.swift in Sources */,
 				6B40D1E22370F14000C1D1F7 /* Pedido.swift in Sources */,
@@ -378,6 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5273DBFVK8;
 				INFOPLIST_FILE = ERPLogistica/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -397,6 +402,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5273DBFVK8;
 				INFOPLIST_FILE = ERPLogistica/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

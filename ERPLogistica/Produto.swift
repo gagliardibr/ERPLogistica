@@ -10,6 +10,13 @@ import UIKit
 
 struct Produto {
     
-    let nome: String?
-    let quantidade: Int?
+    let nomeProduto: String
+    let quantide: String
+    
+    init(nomeProduto: String = " ",
+            quantide: String = " ") {
+           
+        self.nomeProduto = nomeProduto
+        self.quantide = quantide
+       }
 }
