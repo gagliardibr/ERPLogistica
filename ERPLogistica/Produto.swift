@@ -11,12 +11,12 @@ import UIKit
 struct Produto {
     
     let nomeProduto: String
-    let quantidade: String
+    let quantide: String
     
     init(nomeProduto: String = " ",
-            quantidade: String = " ") {
+            quantide: String = " ") {
            
         self.nomeProduto = nomeProduto
-        self.quantidade = quantidade
+        self.quantide = quantide
        }
 }

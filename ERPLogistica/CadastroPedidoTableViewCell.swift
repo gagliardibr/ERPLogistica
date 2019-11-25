@@ -10,8 +10,8 @@ import UIKit
 
 class CadastroPedidoTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var nomeProduto: UILabel!
-    @IBOutlet weak var quantidade: UILabel!
+    @IBOutlet weak var nomeProduto: UILabel?
+    @IBOutlet weak var quantidade: UILabel?
     
     
     override func awakeFromNib() {

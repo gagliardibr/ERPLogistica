@@ -13,6 +13,7 @@ struct Pedido {
     //Pedido
     let codVenda: String
     let notaFiscal: String
+    let data: String
 
     //cliente
     let nomeCliente: String
@@ -26,7 +27,7 @@ struct Pedido {
     let produtos: [Produto]
     
     init(codVenda: String = " ", notaFiscal: String = " ",  endereco: String = " ",
-         nomeCliente: String = " ", data: String = " ", status: String, produtos: [Produto] ) {
+         nomeCliente: String = " ", data: String = " ") {
         
         self.codVenda = codVenda
         self.notaFiscal = notaFiscal
@@ -36,4 +37,5 @@ struct Pedido {
         self.status = status
         self.produtos = produtos
     }
+    
 }
