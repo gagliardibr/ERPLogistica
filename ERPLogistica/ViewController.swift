@@ -70,6 +70,14 @@ class ViewController: UIViewController {
         lblDate.inputView = datePicker
         setupKeyboardNotifications()
     }
+    
+    
+    @IBAction func btnCancelAction(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+        }
+    
+    
     @IBAction func btnProximo(_ sender: Any) {
         var ref: DatabaseReference
         ref = Database.database().reference()

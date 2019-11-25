@@ -20,14 +20,13 @@ struct Pedido {
     let endereco: String
     
     //Data do pedido
-    let data: String
     let status: String
     
     //Produto
     let produtos: [Produto]
     
     init(codVenda: String = " ", notaFiscal: String = " ",  endereco: String = " ",
-         nomeCliente: String = " ", data: String = " ") {
+         nomeCliente: String = " ", data: String = " ", status: String = " ", produtos: [Produto] = []) {
         
         self.codVenda = codVenda
         self.notaFiscal = notaFiscal

@@ -17,13 +17,22 @@ class PedidoViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     let mail = MFMailComposeViewController()
+    var arrayString : [String] = []
+    var arrayMsg: [String] = []
+    var messageBody: String = ""
+    var separadorMsg: String = ""
     
+    var separator2: String = ""
+    var array :[String] = []
+    
+    @IBOutlet weak var btnNovoPedido: UIButton!
     var ref: DatabaseReference!
     var arrayDosProdutos: [Produto] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        btnNovoPedido.layer.cornerRadius = 10
         let nibName = UINib(nibName: "PedidosCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "cell")
         
@@ -35,67 +44,51 @@ class PedidoViewController: UIViewController {
         getFromFirebase()
     }
     
-    
-    @IBAction func geraRelatorioTapped(_ sender: Any) {
+    @IBAction func gerarRelatorio(_ sender: Any) {
         sendEmail()
-        
     }
-    
-    
     
     func sendEmail() {
         if MFMailComposeViewController.canSendMail() {
             
-          
             for (index, _) in pedidoArray.enumerated() {
-            
-            let pedidoAtual = pedidoArray[index]
                 
-                print (index)
-          
-            mail.mailComposeDelegate = self
-            mail.setPreferredSendingEmailAddress("logistica.erpp@gmail.com")
-            mail.setSubject("Relatório de Pedidos")
-            mail.setToRecipients(["giovane_barreira@hotmail.com"])
-            
-            
-            var arrayStringPedido : [String] = []
-            let arrayPedido = arrayStringPedido
-            let separator = arrayPedido.joined(separator:"\n")
-            let space = "--------------------------------------------"
-            
-            for (_, pedidos) in pedidoArray.enumerated() {
-                
-                let strings = "Nome: \(pedidoAtual.nomeCliente)\nCódVenda: \(pedidoAtual.codVenda)\nData do Pedido: \(pedidoAtual.data) \nEndereco: \(pedidoAtual.endereco)\nNota Fiscal: \(pedidoAtual.notaFiscal) \nProdutos:\n\(separator) \n\(space)"
-                
-                arrayStringPedido.append(strings)
-            }
-            
-            
-            var arrayString : [String] = []
-            for (_, value) in pedidoAtual.produtos.enumerated() {
-                
-                let strings = "\nNome: \(value.nomeProduto) \nQuantidade: \(value.quantidade)"
-                arrayString.append(strings)
-            }
-            
-            let array = arrayString
-            let separator2 = array.joined(separator:"\n")
-    
-            let messageBody = "Nome: \(pedidoAtual.nomeCliente)\nCódVenda: \(pedidoAtual.codVenda)\nData do Pedido: \(pedidoAtual.data) \nEndereco: \(pedidoAtual.endereco)\nNota Fiscal: \(pedidoAtual.notaFiscal) \nProdutos:\n\(separator2) \n\(space)"
+                let pedidoAtual = pedidoArray[index]
+                mail.mailComposeDelegate = self
+                mail.setPreferredSendingEmailAddress("logistica.erpp@gmail.com")
+                mail.setSubject("Relatório de Pedidos")
+                mail.setToRecipients(["giovane_barreira@hotmail.com"])
                 
                 
-            var arrayMsg: [String] = []
-            arrayMsg.append(messageBody)
+                var arrayStringPedido : [String] = []
+                let arrayPedido = arrayStringPedido
+                let space = "--------------------------------------------"
+                arrayString.removeAll()
+                separator2.removeAll()
+              //  for (_, pedido) in pedidoArray.enumerated() {
+                    self.separator2.removeAll()
+                    for value in pedidoArray[index].produtos {
+                                           
+                        let strings = "\nNome: \(value.nomeProduto) \nQuantidade: \(value.quantidade)"
+                        arrayString.append(strings)
+                        self.separator2 = arrayString.joined(separator:"\n")
+                     
+                    }
+                 
+            //    }
                 
-            let separadorMsg = arrayMsg.joined(separator: "\n")
+                messageBody = "Nome: \(pedidoAtual.nomeCliente)\nCódVenda: \(pedidoAtual.codVenda)\nData do Pedido: \(pedidoAtual.data) \nEndereco: \(pedidoAtual.endereco)\nNota Fiscal: \(pedidoAtual.notaFiscal) \nProdutos:\n\(separator2) \n\(space)"
+               
                 
-            mail.setMessageBody(separadorMsg, isHTML: false)
-            present(mail, animated: true)
+                arrayMsg.append(messageBody)
+                separadorMsg = arrayMsg.joined(separator: "\n")
+                mail.setMessageBody(separadorMsg, isHTML: false)
                 
             }
-            
         }
+
+        print(separadorMsg)
+        present(mail, animated: true)
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {

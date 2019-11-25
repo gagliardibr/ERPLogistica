@@ -50,7 +50,7 @@ class CadastraProdutoViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
                 
             } else {
-                let produto = Produto(nomeProduto: textField!.text!, quantide: textField2!.text!)
+                let produto = Produto(nomeProduto: textField!.text!, quantidade: textField2!.text!)
                 self.prodArray?.append(produto)
                 let alert = UIAlertController(title: "Produto adicionado com sucesso!", message: "", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
@@ -66,10 +66,18 @@ class CadastraProdutoViewController: UIViewController {
         var ref: DatabaseReference
         ref = Database.database().reference()
         
-        ref.child("Pedido").child(idPedido!.codVenda).setValue(["codVenda": idPedido!.codVenda, "notaFiscal": idPedido!.notaFiscal,"endereco": idPedido!.endereco,"nomeCliente": idPedido!.nomeCliente, "statusPedido": "Em Separação", "dataPedido": idPedido!.data])
-        
-        for (index, pedido) in prodArray!.enumerated() {
-            ref.child("Pedido").child(idPedido!.codVenda).child("produtos").child(String(index)).setValue(["nome": pedido.nomeProduto, "quantidade": pedido.quantide])
+        if prodArray!.isEmpty {
+            let alert = UIAlertController(title: "Pedidos sem produtos.", message: "Favor adicionar produtos no pedido.", preferredStyle: .alert)
+                       alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                       self.present(alert, animated: true, completion: nil)
+        } else {
+            ref.child("Pedido").child(idPedido!.codVenda).setValue(["codVenda": idPedido!.codVenda, "notaFiscal": idPedido!.notaFiscal,"endereco": idPedido!.endereco,"nomeCliente": idPedido!.nomeCliente, "statusPedido": "Em Separação", "dataPedido": idPedido!.data])
+            
+            for (index, pedido) in prodArray!.enumerated() {
+                ref.child("Pedido").child(idPedido!.codVenda).child("produtos").child(String(index)).setValue(["nome": pedido.nomeProduto, "quantidade": pedido.quantidade])
+            }
+            
+            self.dismiss(animated: true, completion: nil)
         }
 }
     
@@ -84,7 +92,7 @@ extension CadastraProdutoViewController: UITableViewDelegate, UITableViewDataSou
         
         print(prodArray![indexPath.row])
         cell.nomeProduto?.text = prodArray![indexPath.row].nomeProduto
-        cell.quantidade?.text = prodArray![indexPath.row].quantide
+        cell.quantidade?.text = prodArray![indexPath.row].quantidade
         
         return cell
     }

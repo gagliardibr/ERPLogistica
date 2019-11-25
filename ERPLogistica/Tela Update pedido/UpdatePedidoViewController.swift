@@ -18,8 +18,12 @@ class UpdatePedidoViewController: UIViewController {
     @IBOutlet weak var nomeCliente: UILabel!
     @IBOutlet weak var nroNota: UILabel!
     @IBOutlet weak var endereco: UILabel!
+    @IBOutlet weak var status: UILabel!
     @IBOutlet weak var pickerView: UIPickerView!
     var ref: DatabaseReference!
+    
+    @IBOutlet weak var salvar: UIButton!
+    @IBOutlet weak var email: UIButton!
     
     var pickerData: [String] = [" ", "Enviado", "Em Separação", "Aguardando Envio", "Cancelado"]
     
@@ -27,12 +31,16 @@ class UpdatePedidoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        salvar.layer.cornerRadius = 10
+        email.layer.cornerRadius = 10
+        
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
         
         nomeCliente.text = pedidoArray[indexTelaPedido!.item].nomeCliente
         endereco.text = pedidoArray[indexTelaPedido!.item].endereco
         nroNota.text = pedidoArray[indexTelaPedido!.item].notaFiscal
+        status.text = pedidoArray[indexTelaPedido!.item].status
         
     }
     @IBAction func emailBtnTapped(_ sender: Any) {

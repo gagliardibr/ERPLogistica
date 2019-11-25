@@ -189,7 +189,7 @@
 				6B600303236C9BAF002BD29C /* Sources */,
 				6B600304236C9BAF002BD29C /* Frameworks */,
 				6B600305236C9BAF002BD29C /* Resources */,
-				C398FD4A1CBC7ECE8123F22F /* [CP] Embed Pods Frameworks */,
+				FE206365004ED5BD355ABA1B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -274,7 +274,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C398FD4A1CBC7ECE8123F22F /* [CP] Embed Pods Frameworks */ = {
+		FE206365004ED5BD355ABA1B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -300,7 +300,6 @@
 			files = (
 				6B60030F236C9BAF002BD29C /* ViewController.swift in Sources */,
 				AED8A0992372210D00DD61C1 /* PedidoViewController.swift in Sources */,
-				6B40D1DA2370EF8600C1D1F7 /* CadastraProdutoViewController.swift in Sources */,
 				AE40EA6F23799FEA00EEA531 /* ProdutosCell.swift in Sources */,
 				C59E7D0C237A3236006D4BAC /* CadastraProdutoViewController.swift in Sources */,
 				6B60030B236C9BAF002BD29C /* AppDelegate.swift in Sources */,
@@ -455,7 +454,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KNQUVW98YZ;
 				DEVELOPMENT_TEAM = 5273DBFVK8;
 				INFOPLIST_FILE = ERPLogistica/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -476,7 +474,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KNQUVW98YZ;
 				DEVELOPMENT_TEAM = 5273DBFVK8;
 				INFOPLIST_FILE = ERPLogistica/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

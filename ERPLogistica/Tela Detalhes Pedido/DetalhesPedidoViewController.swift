@@ -10,6 +10,7 @@ import UIKit
 
 class DetalhesPedidoViewController: UIViewController {
     
+    @IBOutlet weak var status: UILabel!
     @IBOutlet weak var nomeCliente: UILabel!
     @IBOutlet weak var endereco: UILabel!
     @IBOutlet weak var nroNota: UILabel!
@@ -18,9 +19,12 @@ class DetalhesPedidoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "Pedido \(pedidoArray[indexTelaPedido!.item].codVenda)"
+        
         nomeCliente.text = pedidoArray[indexTelaPedido!.item].nomeCliente
         endereco.text = pedidoArray[indexTelaPedido!.item].endereco
         nroNota.text = pedidoArray[indexTelaPedido!.item].notaFiscal
+        status.text = pedidoArray[indexTelaPedido!.item].status
         
         let nibName = UINib(nibName: "ProdutosCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "ProdutosCell")
@@ -53,7 +57,7 @@ extension DetalhesPedidoViewController: UITableViewDataSource {
         
         let labelNome = UILabel()
         labelNome.frame = CGRect.init(x: 3, y: 0, width: headerView.frame.width-10, height: headerView.frame.height)
-        labelNome.text = "Nome produto"
+        labelNome.text = "Produto"
         
         let labelQuantidade = UILabel()
            labelQuantidade.frame = CGRect.init(x: 250, y: 0, width: headerView.frame.width-10, height: headerView.frame.height)

@@ -113,6 +113,9 @@
                                         <state key="normal" title="Cancelar">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnCancelAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2UT-Qg-p9i"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAh-bQ-Y7a">
                                         <rect key="frame" x="190.5" y="428.5" width="140.5" height="53"/>
