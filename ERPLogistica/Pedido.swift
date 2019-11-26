@@ -6,23 +6,35 @@
 //  Copyright © 2019 Bruna Gagliardi. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Pedido {
     
     //Pedido
-    let codVenda: String?
-    let notaFiscal: String?
-    
-    //Envio
-    let codEnvio: String?
-    let dataEnvio: Date?
-    let statusPedido: String?
-    
+    let codVenda: String
+    let notaFiscal: String
+    let data: String
+
     //cliente
-    let nomeCliente: String?
-    let endereco: String?
+    let nomeCliente: String
+    let endereco: String
     
-    //produto
-    let produto: [Produto]?
+    //Data do pedido
+    let status: String
+    
+    //Produto
+    let produtos: [Produto]
+    
+    init(codVenda: String = " ", notaFiscal: String = " ",  endereco: String = " ",
+         nomeCliente: String = " ", data: String = " ", status: String = " ", produtos: [Produto] = []) {
+        
+        self.codVenda = codVenda
+        self.notaFiscal = notaFiscal
+        self.endereco = endereco
+        self.nomeCliente = nomeCliente
+        self.data = data
+        self.status = status
+        self.produtos = produtos
+    }
+    
 }

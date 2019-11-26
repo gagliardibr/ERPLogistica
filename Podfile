@@ -8,7 +8,7 @@ target 'ERPLogistica' do
   # Pods for ERPLogistica
 	pod 'Firebase'
 	pod 'Firebase/Database'
-
+	
 end
 
 
